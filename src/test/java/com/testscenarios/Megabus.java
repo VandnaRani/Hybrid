@@ -31,11 +31,11 @@ public class Megabus extends ReusableFunction{
 	 sendKeysByAnyLocator(loc.MegaBus_Email_EditBox, "Email");
 	 //driver.findElement(loc.MegaBus_Email_EditBox).sendKeys("uvojasvi@gma");
 	 Thread.sleep(1000);
-	 driver.findElement(loc.MegaBus_ConfirmEmail_EditBox).sendKeys("Email");
+	sendKeysByAnyLocator(loc.MegaBus_ConfirmEmail_EditBox,"ConfirmEmail");
 	 Thread.sleep(1000);
-	 driver.findElement(loc.MegaBus_Password_EditBox).sendKeys("Dhiman12");
+	 sendKeysByAnyLocator(loc.MegaBus_Password_EditBox,"Password");
 	 Thread.sleep(1000);
-	 driver.findElement(loc.MegaBus_ConfirmPassword_EditBox).sendKeys("Dhiamn12");
+	 sendKeysByAnyLocator(loc.MegaBus_ConfirmPassword_EditBox,"ConfirmPassword");
 	 Thread.sleep(1000);
      driver.findElement(loc.MegaBus_checkboxes);
 	 Thread.sleep(1000);
