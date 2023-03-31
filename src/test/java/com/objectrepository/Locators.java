@@ -40,11 +40,11 @@ public final By Orange_Login_button =By.xpath("//button[contains(@type,'submit')
 public final By triputibalaji_DateofBirth_clickbutton = By.id("regdob");
 public final By triputibalaji_Yeardropdown=By.xpath("(//select[@class='datepick-month-year'])[2]");
 public final By triputibalaji_Monthdropdown=(By.xpath("(//select[@class='datepick-month-year'])[1]"));
-public final By triputibalaji_DateofbirthselectkBox=(By.xpath("//a[@title='Select Friday, May 4, 1984']"));
+//public final By triputibalaji_DateofbirthselectkBox=(By.xpath("//a[@title='Select Friday, May 4, 1984']"));
 
+public final By triputibalaji_DateofbirthselectkBox=(By.xpath("//a[@title='Select Tuesday, May 15, 1984']"));
 
-
-
+//public final By triputibalaji_DateofbirthselectkBox=(By.partialLinkText("15"));
 
 
 		
