@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-31T02:26:38 CDT" name="Default suite" finished-at="2023-03-31T02:26:49 CDT" duration-ms="11490">
+  <suite started-at="2023-03-31T15:01:28 CDT" name="Default suite" finished-at="2023-03-31T15:01:32 CDT" duration-ms="4433">
     <groups>
     </groups>
-    <test started-at="2023-03-31T02:26:38 CDT" name="Default test" finished-at="2023-03-31T02:26:49 CDT" duration-ms="11490">
-      <class name="com.testscenarios.TripatiBalaji">
-        <test-method signature="f()[pri:0, instance:com.testscenarios.TripatiBalaji@2e005c4b]" started-at="2023-03-31T02:26:38 CDT" name="f" finished-at="2023-03-31T02:26:49 CDT" duration-ms="11457" status="PASS">
+    <test started-at="2023-03-31T15:01:28 CDT" name="Default test" finished-at="2023-03-31T15:01:32 CDT" duration-ms="4433">
+      <class name="com.testscenarios.FaceBookHighlight">
+        <test-method signature="f()[pri:0, instance:com.testscenarios.FaceBookHighlight@a514af7]" started-at="2023-03-31T15:01:28 CDT" name="f" finished-at="2023-03-31T15:01:32 CDT" duration-ms="4390" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-      </class> <!-- com.testscenarios.TripatiBalaji -->
+      </class> <!-- com.testscenarios.FaceBookHighlight -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

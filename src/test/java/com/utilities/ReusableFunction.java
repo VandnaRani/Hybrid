@@ -3,16 +3,23 @@ package com.utilities;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.Select;
 import org.seleniumhq.jetty9.util.LazyList;
 
@@ -42,6 +49,15 @@ public class ReusableFunction {
 			driver = new FirefoxDriver ();
 			driver.manage().window().maximize();
 		}
+
+		
+		public void getURL(String URL) throws IOException {
+			FileInputStream fi = new FileInputStream(propertyFilePath);
+			p.load(fi);
+			driver.get(p.getProperty(URL));
+		}
+			
+			
 		
 		//Sendkeys using any locator
 		public void sendKeysByAnyLocator(By locatorName, String inputdataVariable) throws Exception {
@@ -55,6 +71,7 @@ public class ReusableFunction {
 			if (driver.findElements(locatorName).size() > 0) {
 				if (ele.isEnabled()) {
 					ele.clear();
+					highlightElement(ele);
 					ele.sendKeys(p.getProperty(inputdataVariable));
 				}else {
 					System.out.println(" The given Locator is not enabled,please check");
@@ -78,6 +95,20 @@ public class ReusableFunction {
 				
 			}
 			}
+			public void highlightElement(WebElement element) throws InterruptedException {
+				try {
+					JavascriptExecutor executor = (JavascriptExecutor) driver;
+					for (int i = 0; i < 1; i++) {
+						executor.executeScript("arguments[0].style.border='7px groove green'", element);
+						Thread.sleep(200);
+						executor.executeScript("arguments[0].style.border='7px groove green'", element);
+					}
+				} catch (Exception e) {
+					System.out.println("Exception - " + e.getMessage());
+				}
+			}
+			
+			
 				//DropDown
 				
 				public void printAllDropdownValues(By locater) {
@@ -151,6 +182,26 @@ public class ReusableFunction {
 						System.out.println("The webelement is NOT displayed, please check**************");
 					}
 
+				}
+
+				/*********** timestamp **********/
+				public String timestamp() {
+					Date d = new Date();
+					DateFormat df = new SimpleDateFormat("ddMMMyyy_HHmmss");
+					String timeTamp = df.format(d);
+					return timeTamp;
+				}
+				
+				/*****
+				 * takescreenshot
+				 * 
+				 * @throws Exception
+				 ************/
+				public void takeScreenshot(String name) throws Exception {
+					File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+					String screenshotPath = ".\\Screenshots\\";
+					FileHandler.copy(scrFile, new File(screenshotPath + name + timestamp() + ".PNG"));
+					System.out.println("Screenshot taken*** ");
 				}
 
 				}

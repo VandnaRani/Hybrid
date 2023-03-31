@@ -6,9 +6,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 public class Locators {
-	 public final By JREsignin_Email_EditBox = By.id("txtUserName");
-	 public	final By JREsignin_Password_EditBox = By.id("txtPasswd");
-	 public	final By JREsignin_Signinbutton =By.name("imgbtnSignin");
+	 public final By JRE_Signin_Email_EditBox = By.id("txtUserName");
+	 public	final By JRE_Signin_Password_EditBox = By.id("txtPasswd");
+	 public	final By JRE_Signinbutton =By.name("imgbtnSignin");
 
 
 // Open Cart
@@ -46,6 +46,20 @@ public final By triputibalaji_DateofbirthselectkBox=(By.xpath("//a[@title='Selec
 
 //public final By triputibalaji_DateofbirthselectkBox=(By.partialLinkText("15"));
 
+//JRI Account creation
+public  final By jri_CreateAccount_Name = By.id("signup_name");
+public  final By jri_CreateAccount_Mobile = By.id("signup_mobileno");
+public  final By jri_CreateAccount_Email = By.id("signup_email");
+public  final By jri_CreateAccount_Password = By.id("signup_password");
+public  final By jri_CreateAccount_TermsCheckbox = By.xpath("(//*[@class='checkbox'])[2]");
+public  final By jri_CreateAccount_SubmitButton = By.xpath("//*[@id='imgbtnSubmit']");
+
+//FaceBOOk
+
+public final By FaceBook_Email_Editbox = By.name("email");
+
+public final By FaceBook_Password_Editbox = By.id("pass");
+public final By FaceBook_Login_button = By.name("login");
 
 		
 
