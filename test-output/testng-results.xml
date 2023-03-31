@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-29T01:39:58 CDT" name="Default suite" finished-at="2023-03-29T01:40:13 CDT" duration-ms="14800">
+  <suite started-at="2023-03-31T01:05:11 CDT" name="Default suite" finished-at="2023-03-31T01:05:22 CDT" duration-ms="10674">
     <groups>
     </groups>
-    <test started-at="2023-03-29T01:39:58 CDT" name="Default test" finished-at="2023-03-29T01:40:13 CDT" duration-ms="14800">
-      <class name="com.testscenarios.OpenCart">
-        <test-method signature="f()[pri:0, instance:com.testscenarios.OpenCart@8dbdac1]" started-at="2023-03-29T01:39:58 CDT" name="f" finished-at="2023-03-29T01:40:13 CDT" duration-ms="14773" status="PASS">
+    <test started-at="2023-03-31T01:05:11 CDT" name="Default test" finished-at="2023-03-31T01:05:22 CDT" duration-ms="10674">
+      <class name="com.testscenarios.TripatiBalaji">
+        <test-method signature="f()[pri:0, instance:com.testscenarios.TripatiBalaji@5af3afd9]" started-at="2023-03-31T01:05:11 CDT" name="f" finished-at="2023-03-31T01:05:22 CDT" duration-ms="10639" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-      </class> <!-- com.testscenarios.OpenCart -->
+      </class> <!-- com.testscenarios.TripatiBalaji -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
