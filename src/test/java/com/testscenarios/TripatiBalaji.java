@@ -17,6 +17,8 @@ public class TripatiBalaji extends ReusableFunction{
 	selectByVisibleText(loc.triputibalaji_Monthdropdown,"May" );
 	 Thread.sleep(1000);
 	clickByAnyLocator(loc.triputibalaji_DateofbirthselectkBox);
+	selectByVisibleText(loc.triputibalaji_CountryDropdown,"Afghanistan");	
+	printAllDropdownValues(loc.triputibalaji_CountryDropdown);
 	 Thread.sleep(1000);
 	  
 	  
