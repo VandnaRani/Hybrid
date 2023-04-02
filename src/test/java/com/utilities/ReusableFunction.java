@@ -5,13 +5,17 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.util.Date;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,8 +23,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.io.FileHandler;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.seleniumhq.jetty9.util.LazyList;
 
 import com.objectrepository.Locators;
@@ -204,9 +212,147 @@ public class ReusableFunction {
 					System.out.println("Screenshot taken*** ");
 				}
 
-				}
+				
 
-				
-				
+public void moveToOnElement(By locator) {
+	try {
+		WebElement element = driver.findElement(locator);
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element);
+		actions.click().build().perform();
+	} catch (Exception e) {
+		System.out.println("Error in description: " + e.getStackTrace());
+	}
+
+}
+public void mouseHoverClickandHold(By locator) {
+	try {
+		WebElement element = driver.findElement(locator);
+		Actions actions = new Actions(driver);
+		actions.clickAndHold(element);
+		actions.click().build().perform();
+	} catch (Exception e) {
+		System.out.println("Error in description: " + e.getStackTrace());
+	}
+}
+	public void doubleClick(By locator) {
+		try {
+			WebElement element = driver.findElement(locator);
+			Actions actions = new Actions(driver);
+			actions.doubleClick(element);
+			actions.click().build().perform();
+
+		} catch (Exception e) {
+			System.out.println("Error in description: " + e.getStackTrace());
+		}
+
+	}
+
+	public void dragandDrop(By sourceelementLocator, By destinationelementLocator) {
+		try {
+			WebElement sourceElement = driver.findElement(sourceelementLocator);
+			WebElement destinationElement = driver.findElement(destinationelementLocator);
+
+			if (driver.findElements(sourceelementLocator).size() > 0 && driver.findElements(destinationelementLocator).size() > 0) {
+				Actions action = new Actions(driver);
+				action.dragAndDrop(sourceElement, destinationElement).build().perform();
+			} else {
+				System.out.println("Element(s) was not displayed to drag / drop");
+			}
+		} catch (StaleElementReferenceException e) {
+			System.out.println("Element with " + sourceelementLocator + "or" + destinationelementLocator
+					+ "is not attached to the page document " + e.getStackTrace());
+		} catch (NoSuchElementException e) {
+			System.out.println("Element " + sourceelementLocator + "or" + destinationelementLocator
+					+ " was not found in DOM " + e.getStackTrace());
+		} catch (Exception e) {
+			System.out.println("Error occurred while performing drag and drop operation " + e.getStackTrace());
+		}
+	}
+
+	// Reading ToolTip text
+	public String tooltipText(By locator) {
+		WebElement element = driver.findElement(locator);
+		String tooltip = element.getAttribute("title");
+		return tooltip;
+	}
+
+	// Press Enter/Return Key in Selenium
+	public void pressEnter(By locator) {
+		WebElement element = driver.findElement(locator);
+		element.sendKeys(Keys.RETURN);
+	}
+
+	// Code snippet for Keyboard Actions
+	public void typeTextInCAPS(By locator, String TextToBePrint) {
+		WebElement textBoxElement = driver.findElement(locator);
+		Actions builder = new Actions(driver);
+		Action typeInCAPS = builder.keyDown(textBoxElement, Keys.SHIFT).sendKeys(textBoxElement, TextToBePrint)
+				.keyUp(textBoxElement, Keys.SHIFT).build();
+		typeInCAPS.perform();
+	}
+
+
+	public void waitForElementToBeClickable(By locator, int waitTime) {
+		WebElement element = driver.findElement(locator);
+		try {
+			new WebDriverWait(driver, Duration.ofSeconds(waitTime)).ignoring(StaleElementReferenceException.class)
+					.until(ExpectedConditions.elementToBeClickable(element));
+			System.out.println("element To Be lickable***");
+		} catch (Exception Ex) {
+			System.out.println(Ex);
+			System.out.println("element To Be not Clickable***");
+		}
+	}
+
+	public void waitForElementToBeClickable(int waitTime) {
+		try {
+			new WebDriverWait(driver, Duration.ofSeconds(waitTime)).ignoring(StaleElementReferenceException.class)
+					.until(ExpectedConditions.alertIsPresent());
+			System.out.println("alert Is Present***");
+		} catch (Exception Ex) {
+			System.out.println(Ex);
+			System.out.println("alert Is not Present****");
+		}
+	}
+
+	/***
+	 * instead of fluent wait use customized While loop statement**@throws Exception
+	 *****/
+
+	public void waitforElement(By locater) throws Exception {
+		int i = 0;
+		while (driver.findElements(locater).size() < 1) {
+			Thread.sleep(500);
+			System.out.println("Wait for the element***************");
+			// Suppose system has not present the element it will repeat 30 time
+			// then stop
+			// the execution using break
+			if (i > 30) {
+				System.out.println("Element is not present");
+				break;
+			}
 			
-			
+		}
+			}
+		//Right Click on Webelement
+		public void mouseHoverContextClick(By locator) {
+			try {
+				WebElement element = driver.findElement(locator);
+				Actions actions = new Actions(driver);
+				actions.contextClick(element);
+				actions.click().build().perform();
+
+			} catch (Exception e) {
+				System.out.println("Error in description: " + e.getStackTrace());
+			}
+	}
+	
+
+	
+	
+
+
+}			
+		
+

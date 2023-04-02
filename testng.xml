@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="com.testscenarios.dragAndDrop"/>
+      <class name="com.testscenarios.FaceBookHighlight"/>
+      <class name="com.testscenarios.JRI_AccountCreation"/>
+      <class name="com.testscenarios.Actions_DoubleClick"/>
+      <class name="com.testscenarios.OpenCart"/>
+      <class name="com.testscenarios.TripatiBalaji"/>
+      <class name="com.testscenarios.MoveToWebelement"/>
+      <class name="com.testscenarios.Megabus"/>
+      <class name="com.testscenarios.JRI_RechargeSignIn"/>
+      <class name="com.testscenarios.OrangeHrm"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
