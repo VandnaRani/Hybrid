@@ -10,7 +10,7 @@
       <class name="com.testscenarios.OpenCart"/>
       <class name="com.testscenarios.TripatiBalaji"/>
       <class name="com.testscenarios.MoveToWebelement"/>
-      <class name="com.testscenarios.Megabus"/>
+     <class name ="com.testscenarios.Megabus"/>
       <class name="com.testscenarios.JRI_RechargeSignIn"/>
       <class name="com.testscenarios.OrangeHrm"/>
     </classes>

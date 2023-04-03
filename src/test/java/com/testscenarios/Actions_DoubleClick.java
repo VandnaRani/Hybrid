@@ -16,19 +16,20 @@ public class Actions_DoubleClick extends ReusableFunction {
 	  getURL("ActionsDoubleClickURL");
 	  Thread.sleep(3000);
 	  
-	  //Actions act =new Actions (driver);
-	  //WebElement DoubleClickobj =driver.findElement(By.xpath("//*[@id=\"authentication\"]/button"));
-			  //act.doubleClick(DoubleClickobj).perform();
-	  doubleClick(By.xpath("//*[@id=\"authentication\\\"]/button"));
+	  Actions act =new Actions (driver);
+	  WebElement DoubleClickobj =driver.findElement(By.xpath("//*[@id=\"authentication\"]/button"));
+			  act.doubleClick(DoubleClickobj).perform();
+	  //doubleClick(By.xpath("//*[@id=\"authentication\\\"]/button"));
 			  //Click on Alert
-			  //driver.switchTo().alert().accept();
+			  driver.switchTo().alert().accept();
 			  Thread.sleep(3000);
 			  
 			  //Right click
 			  getURL("RightClickURL");
-			  mouseHoverContextClick(By.xpath("//*[text()='right click me']"));
-			  //WebElement RightClickobj =driver.findElement(By.xpath("//*[text()='right click me']"));
-			  //act.contextClick(RightClickobj).perform();
-			  Thread.sleep(3000);
+			  //mouseHoverContextClick(By.xpath("//*[text()='right click me']"));
+			  WebElement RightClickobj =driver.findElement(By.xpath("//*[text()='right click me']"));
+			  act.contextClick(RightClickobj).perform();
+			 
+				
   }
 }
