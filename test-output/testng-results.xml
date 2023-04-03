@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-31T17:05:22 CDT" name="Default suite" finished-at="2023-03-31T17:05:27 CDT" duration-ms="4665">
+  <suite started-at="2023-04-02T21:43:15 CDT" name="Default suite" finished-at="2023-04-02T21:43:29 CDT" duration-ms="13808">
     <groups>
     </groups>
-    <test started-at="2023-03-31T17:05:22 CDT" name="Default test" finished-at="2023-03-31T17:05:27 CDT" duration-ms="4665">
-      <class name="com.testscenarios.FaceBookHighlight">
-        <test-method signature="f()[pri:0, instance:com.testscenarios.FaceBookHighlight@a514af7]" started-at="2023-03-31T17:05:22 CDT" name="f" finished-at="2023-03-31T17:05:27 CDT" duration-ms="4624" status="PASS">
+    <test started-at="2023-04-02T21:43:15 CDT" name="Default test" finished-at="2023-04-02T21:43:29 CDT" duration-ms="13808">
+      <class name="com.testscenarios.Megabus">
+        <test-method signature="f()[pri:0, instance:com.testscenarios.Megabus@12468a38]" started-at="2023-04-02T21:43:15 CDT" name="f" finished-at="2023-04-02T21:43:29 CDT" duration-ms="13775" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-      </class> <!-- com.testscenarios.FaceBookHighlight -->
+      </class> <!-- com.testscenarios.Megabus -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -20,10 +20,10 @@ public class Megabus extends ReusableFunction{
 	  openEdgeBrowser();
 	  driver.get("https://us.megabus.com/account-management/login");
 	  Thread.sleep(1000);
-	  if(driver.findElements(loc.MegaBus_signup_submitbutton).size()>0) {
-		  System.out.println("element is displayed");
+	  if(driver.findElement(loc.MegaBus_signup_submitbutton).isEnabled()) {
+		  System.out.println("element is enable");
 	  }else {
-		  System.out.println("element is not displayed");
+		  System.out.println("element is not enable");
 	  }
 
 	 driver.findElement(loc.MegaBus_signupbutton).click();
@@ -39,7 +39,7 @@ public class Megabus extends ReusableFunction{
 	 Thread.sleep(1000);
      driver.findElement(loc.MegaBus_checkboxes);
 	 Thread.sleep(1000);
-	 //driver.findElement(loc.MegaBus_signup_submitbutton).click();
+	 driver.findElement(loc.MegaBus_signup_submitbutton).click();
 	 
 
 	  
