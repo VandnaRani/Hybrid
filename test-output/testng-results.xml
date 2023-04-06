@@ -1,17 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-04-02T23:02:42 CDT" name="Default suite" finished-at="2023-04-02T23:02:55 CDT" duration-ms="13674">
+  <suite started-at="2023-04-06T14:55:42 CDT" name="Suite" finished-at="2023-04-06T14:57:35 CDT" duration-ms="112886">
     <groups>
     </groups>
-    <test started-at="2023-04-02T23:02:42 CDT" name="Default test" finished-at="2023-04-02T23:02:55 CDT" duration-ms="13674">
+    <test started-at="2023-04-06T14:55:42 CDT" name="Test" finished-at="2023-04-06T14:57:35 CDT" duration-ms="112886">
+      <class name="com.testscenarios.JRI_RechargeSignIn">
+        <test-method signature="f()[pri:0, instance:com.testscenarios.JRI_RechargeSignIn@16d04d3d]" started-at="2023-04-06T14:57:09 CDT" name="f" finished-at="2023-04-06T14:57:22 CDT" duration-ms="12527" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+      </class> <!-- com.testscenarios.JRI_RechargeSignIn -->
+      <class name="com.testscenarios.OpenCart">
+        <test-method signature="f()[pri:0, instance:com.testscenarios.OpenCart@7e07db1f]" started-at="2023-04-06T14:56:13 CDT" name="f" finished-at="2023-04-06T14:56:29 CDT" duration-ms="16174" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+      </class> <!-- com.testscenarios.OpenCart -->
+      <class name="com.testscenarios.MoveToWebelement">
+        <test-method signature="f()[pri:0, instance:com.testscenarios.MoveToWebelement@36bc55de]" started-at="2023-04-06T14:56:43 CDT" name="f" finished-at="2023-04-06T14:56:57 CDT" duration-ms="13253" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+      </class> <!-- com.testscenarios.MoveToWebelement -->
       <class name="com.testscenarios.Actions_DoubleClick">
-        <test-method signature="f()[pri:0, instance:com.testscenarios.Actions_DoubleClick@12468a38]" started-at="2023-04-02T23:02:42 CDT" name="f" finished-at="2023-04-02T23:02:55 CDT" duration-ms="13642" status="PASS">
+        <test-method signature="f()[pri:0, instance:com.testscenarios.Actions_DoubleClick@35cabb2a]" started-at="2023-04-06T14:56:03 CDT" name="f" finished-at="2023-04-06T14:56:13 CDT" duration-ms="9589" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
       </class> <!-- com.testscenarios.Actions_DoubleClick -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="com.testscenarios.dragAndDrop">
+        <test-method signature="f()[pri:0, instance:com.testscenarios.dragAndDrop@6ae5aa72]" started-at="2023-04-06T14:55:42 CDT" name="f" finished-at="2023-04-06T14:55:50 CDT" duration-ms="7915" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+      </class> <!-- com.testscenarios.dragAndDrop -->
+      <class name="com.testscenarios.TripatiBalaji">
+        <test-method signature="f()[pri:0, instance:com.testscenarios.TripatiBalaji@1189dd52]" started-at="2023-04-06T14:56:29 CDT" name="f" finished-at="2023-04-06T14:56:43 CDT" duration-ms="14414" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+      </class> <!-- com.testscenarios.TripatiBalaji -->
+      <class name="com.testscenarios.Megabus">
+        <test-method signature="f()[pri:0, instance:com.testscenarios.Megabus@564fabc8]" started-at="2023-04-06T14:56:57 CDT" name="f" finished-at="2023-04-06T14:57:09 CDT" duration-ms="12827" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+      </class> <!-- com.testscenarios.Megabus -->
+      <class name="com.testscenarios.JRI_AccountCreation">
+        <test-method signature="f()[pri:0, instance:com.testscenarios.JRI_AccountCreation@3a93b025]" started-at="2023-04-06T14:55:54 CDT" name="f" finished-at="2023-04-06T14:56:03 CDT" duration-ms="8599" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+      </class> <!-- com.testscenarios.JRI_AccountCreation -->
+      <class name="com.testscenarios.FaceBookHighlight">
+        <test-method signature="f()[pri:0, instance:com.testscenarios.FaceBookHighlight@79e2c065]" started-at="2023-04-06T14:55:50 CDT" name="f" finished-at="2023-04-06T14:55:54 CDT" duration-ms="4068" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+      </class> <!-- com.testscenarios.FaceBookHighlight -->
+      <class name="com.testscenarios.OrangeHrm">
+        <test-method signature="f()[pri:0, instance:com.testscenarios.OrangeHrm@49ec71f8]" started-at="2023-04-06T14:57:22 CDT" name="f" finished-at="2023-04-06T14:57:35 CDT" duration-ms="13462" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+      </class> <!-- com.testscenarios.OrangeHrm -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
