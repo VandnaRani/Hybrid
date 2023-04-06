@@ -13,6 +13,8 @@
      <class name ="com.testscenarios.Megabus"/>
       <class name="com.testscenarios.JRI_RechargeSignIn"/>
       <class name="com.testscenarios.OrangeHrm"/>
+      <class name ="com.testscenarios.DBConnection"/>
+      <class name ="com.testscenarios.DBEmployee"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
